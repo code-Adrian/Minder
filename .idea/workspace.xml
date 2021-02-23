@@ -20,7 +20,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e45e7d4-5ff5-44c2-9d7c-1c596a23a303" name="Default Changelist" comment="This is a test commit" />
+    <list default="true" id="0e45e7d4-5ff5-44c2-9d7c-1c596a23a303" name="Default Changelist" comment="This is a test commit">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Minder.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Minder.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Activity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Activity/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Adapters/TaskAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Adapters/TaskAdapter.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,8 +62,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -68,6 +84,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -75,6 +94,7 @@
       <recent name="org.wit.Minder.Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Adrian\AndroidStudioProjects\Minder\app\src\main\res\layout\TaskViews" />
       <recent name="C:\Users\Adrian\AndroidStudioProjects\Minder\app\src\main\java\org\wit\Minder\Activity" />
       <recent name="C:\Users\Adrian\AndroidStudioProjects\Minder\app\src\main\res\drawable" />
     </key>
@@ -217,18 +237,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="This is a test commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1614024602047">
+    <state x="394" y="260" key="#PSD" timestamp="1614092897503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614024602047" />
+    <state x="394" y="260" key="#PSD/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614092897503" />
+    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1614101843397">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614101843397" />
     <state x="739" y="298" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1613748742994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="298" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1613748742994" />
-    <state x="39" y="187" width="1736" height="856" key="AVDManager" timestamp="1614008159126">
+    <state x="39" y="187" width="1736" height="856" key="AVDManager" timestamp="1614094286119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="39" y="187" width="1736" height="856" key="AVDManager/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614008159126" />
+    <state x="39" y="187" width="1736" height="856" key="AVDManager/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614094286119" />
     <state x="540" y="274" key="AndroidCreateResourceFileDialog" timestamp="1613781055031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,30 +265,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090269016" />
-    <state x="838" y="417" width="243" height="293" key="Github.ShareDialog" timestamp="1614090922153">
+    <state x="838" y="417" width="243" height="293" key="Github.ShareDialog" timestamp="1614091000546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="838" y="417" width="243" height="293" key="Github.ShareDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090922153" />
-    <state x="710" y="225" key="Github.UntrackedFilesDialog" timestamp="1614085394931">
+    <state x="838" y="417" width="243" height="293" key="Github.ShareDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614091000546" />
+    <state x="710" y="225" key="Github.UntrackedFilesDialog" timestamp="1614091009501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="710" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614085394931" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1614090431945">
+    <state x="710" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614091009501" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1614108837434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090431945" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1614090431945">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1614108837434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090431945" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1614090431945">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1614108837434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090431945" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1614090431945">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1614108837434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090431945" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
     <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1614089695846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -285,6 +309,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="58" y="99" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614088786187" />
+    <state x="-1463" y="0" width="1409" height="1027" key="dock-window-1" timestamp="1614101369996">
+      <screen x="-1680" y="0" width="1680" height="1010" />
+    </state>
+    <state x="-1463" y="0" width="1409" height="1027" key="dock-window-1/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614101369996" />
+    <state x="-1481" y="0" width="1409" height="1027" key="dock-window-2" timestamp="1614114332193">
+      <screen x="-1680" y="0" width="1680" height="1010" />
+    </state>
+    <state x="-1481" y="0" width="1409" height="1027" key="dock-window-2/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614114332193" />
     <state x="763" y="381" key="git4idea.rebase.GitRebaseDialog" timestamp="1614087083987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -301,5 +333,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="309" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614087519214" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614106268035">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614106268035" />
   </component>
 </project>

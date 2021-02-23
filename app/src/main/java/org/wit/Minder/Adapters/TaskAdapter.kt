@@ -23,7 +23,7 @@ class TaskAdapter( private val tasks: MutableList<TasksModel>): RecyclerView.Ada
 
 
 
-
+//This will inflate the class "TaskViewHolder" with task_view. The class TaskViewHolder accepts a view as a parameter which we use to inflate the class.
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         //This gets the view from the "task_view" and converts it to a class that we can use
     return TaskViewHolder(
@@ -61,7 +61,7 @@ var curTask = tasks[position]
                    position2 =position
            isChecked2 = checkbox.isChecked
 
-           title.text = curTask.taskTitle
+           title.text =  curTask.Time + " " +curTask.taskTitle
            checkbox.isChecked = curTask.isChecked
            stripThroughText(title, curTask.isChecked)
 
@@ -106,7 +106,7 @@ fun deleteDoneTasks(){
 
 
         if(isChecked2){
-             tasks[position2].taskTitle = time.text.toString() + " " + description.text.toString()
+             tasks[position2].taskTitle =  description.text.toString()
             tasks[position2].Time = time.text.toString()
 
         }
