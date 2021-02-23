@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTaskWeatherItems"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTaskWeatherCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTaskWeatherCountry"
+        android:layout_width="283dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="396dp"
+        android:ems="10"
+        android:hint="Country"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTaskWeatherCounty"
+        android:layout_width="283dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="340dp"
+        android:ems="10"
+        android:hint="County"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTaskWeatherCity"
+        android:layout_width="283dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="284dp"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextWeatherTemp"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="228dp"
+        android:ems="10"
+        android:hint="Enter temperature"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddWeatherTask"
+        android:layout_width="134dp"
+        android:layout_height="58dp"
+        android:text="Add Task"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditWeatherTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWeatherTemp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnEditWeatherTask"
+        android:layout_width="134dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="3dp"
+        android:text="Edit Task"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeleteWeatherTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDeleteWeatherTask"
+        android:layout_width="134dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="36dp"
+        android:text="Delete Task
+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
