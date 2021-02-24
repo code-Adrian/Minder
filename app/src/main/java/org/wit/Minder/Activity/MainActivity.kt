@@ -16,8 +16,10 @@ import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.toast
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import org.wit.Minder.Adapters.DateTaskAdapter
 import org.wit.Minder.Adapters.TaskAdapter
 import org.wit.Minder.Adapters.WeatherTaskAdapter
+import org.wit.Minder.Models.DateModel
 import org.wit.Minder.Models.TasksModel
 import org.wit.Minder.Models.WeatherModel
 import org.wit.Minder.R
@@ -25,6 +27,8 @@ import org.wit.Minder.R
 
 private lateinit var taskAdapter: TaskAdapter
 private lateinit var taskWeatherAdapter: WeatherTaskAdapter
+private lateinit var taskDateAdapter: DateTaskAdapter
+
 private val channel_ID = "Channel ID"
 private val notificationId = 101
 class MainActivity : AppCompatActivity(), AnkoLogger {
@@ -153,7 +157,37 @@ taskWeatherAdapter.editTask(Country,County,City,WeatherTemp)
         }
 
         calendar.setOnClickListener{
-            toast("Test3")
+            setContentView(R.layout.datetask_layout)
+
+            taskDateAdapter = DateTaskAdapter(mutableListOf())
+            val taskDateView = findViewById(R.id.rvTaskDateItems) as RecyclerView
+
+            taskDateView.adapter = taskDateAdapter
+            taskDateView.layoutManager = LinearLayoutManager(this)
+
+            //Buttons
+            val btnDateAdd = findViewById(R.id.btnAddDateTask) as Button
+            val btnDateDelete = findViewById(R.id.btnDeleteDateTask) as Button
+            val btnDateEdit = findViewById(R.id.btnEditDateTask) as Button
+
+            //TextView
+            val time = findViewById(R.id.editTextDateTime) as EditText
+            val date = findViewById(R.id.editTextDateTask) as EditText
+
+            btnDateAdd.setOnClickListener{
+                val dateModel = DateModel(date.text.toString(),time.text.toString())
+                taskDateAdapter.addTask(dateModel)
+
+            }
+
+            btnDateDelete.setOnClickListener{
+                taskDateAdapter.deleteDoneTasks()
+            }
+
+            btnDateEdit.setOnClickListener{
+                taskDateAdapter.editTask(date,time)
+            }
+
         }
     }
 

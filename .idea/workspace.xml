@@ -20,28 +20,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e45e7d4-5ff5-44c2-9d7c-1c596a23a303" name="Default Changelist" comment="This is a test commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Minder.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Minder.app.iml" afterDir="false" />
+    <list default="true" id="0e45e7d4-5ff5-44c2-9d7c-1c596a23a303" name="Default Changelist" comment="- Added dependencies for web scraper API: &quot;Jsoup&quot; for future weather task functionality.&#10;- Added internet access permissions to AndroidManifest for Jsoup API.&#10;- Added a weather task model for second Recycler view.&#10;- Added a second adapter for weather task functionality.&#10;- Added a weather task view for Recycler view.&#10;- Added simple CRUD functionality for weather task card layout view.&#10;- Added click listener for user to access weather task card layout view from main menu cards.&#10;- Added simple background thread for future notification task checker.&#10;(Not functional yet)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Activity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Activity/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Adapters/TaskAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/Minder/Adapters/TaskAdapter.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_29]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,8 +52,8 @@
       <list>
         <option value="Kotlin Class" />
         <option value="Class" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -241,10 +229,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="394" y="260" key="#PSD/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614092897503" />
-    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1614101843397">
+    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1614172624292">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614101843397" />
+    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614172624292" />
     <state x="739" y="298" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1613748742994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,50 +261,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="710" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614091009501" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1614108837434">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1614180856865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1614108837434">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614180856865" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1614180856865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1614108837434">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614180856865" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1614180856865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1614108837434">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614180856865" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1614180856865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614108837434" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614180856865" />
     <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1614089695846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614089695846" />
-    <state x="703" y="222" key="RollbackChangesDialog" timestamp="1614089341758">
+    <state x="703" y="222" key="RollbackChangesDialog" timestamp="1614115761388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="703" y="222" key="RollbackChangesDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614089341758" />
+    <state x="703" y="222" key="RollbackChangesDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614115761388" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1614090991570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614090991570" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1614086169760">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1614115847281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614086169760" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614115847281" />
     <state x="58" y="99" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614088786187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="58" y="99" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614088786187" />
-    <state x="-1463" y="0" width="1409" height="1027" key="dock-window-1" timestamp="1614101369996">
+    <state x="-1573" y="67" width="1529" height="764" key="dock-window-1" timestamp="1614181057481">
       <screen x="-1680" y="0" width="1680" height="1010" />
     </state>
-    <state x="-1463" y="0" width="1409" height="1027" key="dock-window-1/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614101369996" />
+    <state x="-1573" y="67" width="1529" height="764" key="dock-window-1/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614181057481" />
     <state x="-1481" y="0" width="1409" height="1027" key="dock-window-2" timestamp="1614114332193">
       <screen x="-1680" y="0" width="1680" height="1010" />
     </state>
     <state x="-1481" y="0" width="1409" height="1027" key="dock-window-2/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614114332193" />
+    <state x="683" y="308" key="git4idea.merge.GitPullDialog" timestamp="1614116038381">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="683" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614116038381" />
     <state x="763" y="381" key="git4idea.rebase.GitRebaseDialog" timestamp="1614087083987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -333,9 +325,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="309" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614087519214" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614106268035">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614172599481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614106268035" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1680.0.1680.1010@0.0.1920.1040" timestamp="1614172599481" />
   </component>
 </project>
