@@ -4,6 +4,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.*
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
@@ -47,15 +49,17 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         touchListeners()
         //Creates Notification - Only once
         createNotification()
+
 // Multi Threading is here. Starts a background thread to keep track of notifications
-                //  Thread(Runnable {
-          //  runner()
-      //  }).start()
+            //      Thread(Runnable {
+         //   runner()
+       // }).start()
     }
 
 
 
     fun touchListeners(){
+
         //Main menu
         val tasks = findViewById(R.id.tasks) as CardView
         val weather = findViewById(R.id.weather) as CardView
@@ -73,6 +77,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             taskView.layoutManager = LinearLayoutManager(this)
 
 taskAdapter.firebasePull()
+            textHelperTimeTasks()
             //Listeners - Temporarly
             val addTask = findViewById(R.id.btnAddTask) as Button
             val editTask = findViewById(R.id.btnEditTask) as Button
@@ -180,7 +185,9 @@ taskWeatherAdapter.editTask(Country,County,City,WeatherTemp)
 
             taskDateView.adapter = taskDateAdapter
             taskDateView.layoutManager = LinearLayoutManager(this)
-
+            //Helpers
+            textHelperTimeCalendar()
+            textHelperDateCalendar()
             //Buttons
             val btnDateAdd = findViewById(R.id.btnAddDateTask) as Button
             val btnDateDelete = findViewById(R.id.btnDeleteDateTask) as Button
@@ -250,6 +257,61 @@ taskDateAdapter.firebaseSave()
 
 
 
+    fun textHelperTimeTasks(){
+        val time = findViewById(R.id.editTextTime) as EditText
+        time.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+                if(time.length() == 2){
+                    time.append(":")
+                }
+            }
+        })
+    }
+
+fun textHelperTimeCalendar(){
+    val time = findViewById(R.id.editTextDateTime) as EditText
+    time.addTextChangedListener(object : TextWatcher {
+        override fun afterTextChanged(s: Editable?) {
+        }
+
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        }
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+          if(time.length() == 2){
+              time.append(":")
+          }
+        }
+    })
+}
+
+    fun textHelperDateCalendar(){
+        val date = findViewById(R.id.editTextDateTask) as EditText
+        date.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+                if(date.length() == 2){
+                    date.append("/")
+                }else if(date.length() == 5){
+                    date.append("/")
+                }
+            }
+        })
+    }
 
 
     fun runner(){
