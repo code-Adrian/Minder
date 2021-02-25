@@ -6,6 +6,7 @@
     android:layout_height="80dp"
     android:paddingStart="8dp"
     android:paddingEnd="8dp"
+
     >
 
 
@@ -13,12 +14,15 @@
         android:id="@+id/tvWeatherTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+
         android:text="test"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cvWeatherDone"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
 
     <CheckBox
         android:id="@+id/cvWeatherDone"
@@ -26,6 +30,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 

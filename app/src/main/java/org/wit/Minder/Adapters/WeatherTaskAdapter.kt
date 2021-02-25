@@ -7,12 +7,18 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import org.wit.Minder.Models.TasksModel
 import org.wit.Minder.Models.WeatherModel
 import org.wit.Minder.R
 
 class WeatherTaskAdapter( private val tasks: MutableList<WeatherModel>): RecyclerView.Adapter<WeatherTaskAdapter.WeatherTaskViewHolder>() {
     class WeatherTaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+    val uniqueFirebaseID: String = (android.os.Build.MODEL.toString() + " " + android.os.Build.ID+ " " + android.os.Build.USER + " --WEATHER").replace(".","")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherTaskViewHolder {
         return WeatherTaskViewHolder(
@@ -70,11 +76,17 @@ class WeatherTaskAdapter( private val tasks: MutableList<WeatherModel>): Recycle
     }
 
 
+    fun firebas(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-c3142-default-rtdb.firebaseio.com/").getReference().child("This is a test")
+        ref.push().setValue("Tsfdgdfsg")
+    }
 
     fun addTask(task: WeatherModel){
         //Adds
         tasks.add(task)
         //Makes it visible to the recycler view
+
         notifyItemInserted(itemCount-1)
 
     }
@@ -86,6 +98,7 @@ class WeatherTaskAdapter( private val tasks: MutableList<WeatherModel>): Recycle
         }
         notifyDataSetChanged()
     }
+
 
     fun editTask( country: TextView,county: TextView,city: TextView, weatherTemp : TextView){
 
@@ -101,6 +114,45 @@ class WeatherTaskAdapter( private val tasks: MutableList<WeatherModel>): Recycle
 
     }
 
+
+
+    fun firebaseSave(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-82d22-default-rtdb.firebaseio.com/").getReference().child(uniqueFirebaseID)
+        ref.setValue(tasks)
+
+    }
+
+    fun firebasePull(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-82d22-default-rtdb.firebaseio.com/").getReference().child(uniqueFirebaseID)
+        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+
+                for (p0: DataSnapshot in p0.children) {
+
+
+                    if (p0 != null) {
+                        val country = (p0.child("country").getValue().toString())
+                        val county = (p0.child("county").getValue().toString())
+                        val city = (p0.child("city").getValue().toString())
+                        val weatherTemp = (Integer.parseInt(p0.child("weatherTemp").getValue().toString()))
+
+                        val checked = (p0.child("checked").getValue().toString())
+
+                        val weatherModel = WeatherModel(country,county,city,weatherTemp, checked.toBoolean())
+                        tasks.add(weatherModel)
+                    }
+
+                }
+                notifyDataSetChanged()
+            }
+        })
+    }
 
 
 

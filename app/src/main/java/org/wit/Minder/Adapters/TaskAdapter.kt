@@ -10,6 +10,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import org.wit.Minder.Models.DateModel
 import org.wit.Minder.Models.TasksModel
 import org.wit.Minder.R
 import java.lang.Exception
@@ -18,7 +23,7 @@ class TaskAdapter( private val tasks: MutableList<TasksModel>): RecyclerView.Ada
     //This will hold the "task_view" in a holder.
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-
+    val uniqueFirebaseID: String = (android.os.Build.MODEL.toString() + " " + android.os.Build.ID+ " " + android.os.Build.USER + " --TASKS").replace(".","")
 
 
 
@@ -47,7 +52,11 @@ class TaskAdapter( private val tasks: MutableList<TasksModel>): RecyclerView.Ada
     private var position2: Int = 0
     private var isChecked2: Boolean = false
 
+    fun firebas(){
 
+        var ref = FirebaseDatabase.getInstance("https://minder-c3142-default-rtdb.firebaseio.com/").getReference().child("This is a test")
+        ref.push().setValue("Tsfdgdfsg")
+    }
 
     // Called by RecyclerView to display the data at the specified position.
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
@@ -114,5 +123,42 @@ fun deleteDoneTasks(){
 
     }
 
+
+
+
+    fun firebaseSave(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-82d22-default-rtdb.firebaseio.com/").getReference().child(uniqueFirebaseID)
+        ref.setValue(tasks)
+
+    }
+
+    fun firebasePull(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-82d22-default-rtdb.firebaseio.com/").getReference().child(uniqueFirebaseID)
+        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+
+                for (p0: DataSnapshot in p0.children) {
+
+
+                    if (p0 != null) {
+                        val title = (p0.child("taskTitle").getValue().toString())
+                        val time = (p0.child("time").getValue().toString())
+                        val checked = (p0.child("checked").getValue().toString())
+
+                        val taskModel = TasksModel(title, time, checked.toBoolean())
+                        tasks.add(taskModel)
+                    }
+
+                }
+                notifyDataSetChanged()
+            }
+        })
+    }
 
 }

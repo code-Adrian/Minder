@@ -41,30 +41,44 @@
 
     <Button
         android:id="@+id/btnAddTask"
-        android:layout_width="134dp"
-        android:layout_height="58dp"
+        android:layout_width="133dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="176dp"
         android:text="Add Task"
-        app:layout_constraintBottom_toTopOf="@+id/btnEditTask"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnEditTask"
-        android:layout_width="134dp"
-        android:layout_height="55dp"
-        android:text="Edit Task"
-        app:layout_constraintBottom_toTopOf="@+id/btnDeleteTask"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnDeleteTask"
         android:layout_width="134dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="40dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="80dp"
         android:text="Delete Task
 "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditTask"
+        android:layout_width="133dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="128dp"
+        android:text="Edit Task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/taskGoBack"
+        android:layout_width="134dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:text="Go Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

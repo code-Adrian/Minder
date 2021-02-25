@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import org.wit.Minder.Models.DateModel
 import org.wit.Minder.R
 
@@ -14,7 +18,7 @@ class DateTaskAdapter(private val tasks: MutableList<DateModel>): RecyclerView.A
 
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-
+val uniqueFirebaseID: String = (android.os.Build.MODEL.toString() + " " + android.os.Build.ID+ " " + android.os.Build.USER + " --CALENDAR").replace(".","")
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -23,6 +27,7 @@ class DateTaskAdapter(private val tasks: MutableList<DateModel>): RecyclerView.A
                                 R.layout.datetask_view,parent,false
                         )
         )
+
     }
 
     fun stripThroughText(tvTitle: TextView, isChecked: Boolean){
@@ -69,6 +74,7 @@ class DateTaskAdapter(private val tasks: MutableList<DateModel>): RecyclerView.A
         tasks.add(task)
         //Makes it visible to the recycler view
         notifyItemInserted(itemCount-1)
+
     }
 
     fun deleteDoneTasks(){
@@ -87,6 +93,41 @@ class DateTaskAdapter(private val tasks: MutableList<DateModel>): RecyclerView.A
 
         }
         notifyDataSetChanged()
+    }
+
+    fun firebaseSave(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-82d22-default-rtdb.firebaseio.com/").getReference().child(uniqueFirebaseID)
+        ref.setValue(tasks)
+
+    }
+
+    fun firebasePull(){
+
+        var ref = FirebaseDatabase.getInstance("https://minder-82d22-default-rtdb.firebaseio.com/").getReference().child(uniqueFirebaseID)
+        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+
+                for (p0: DataSnapshot in p0.children) {
+
+
+                    if (p0 != null) {
+                        val time = (p0.child("reminderTime").getValue().toString())
+                        val date = (p0.child("date").getValue().toString())
+                        val checked = (p0.child("checked").getValue().toString())
+
+                        val dateModel = DateModel(date, time, checked.toBoolean())
+                        tasks.add(dateModel)
+                    }
+
+                }
+                notifyDataSetChanged()
+            }
+        })
     }
 
     override fun getItemCount(): Int {

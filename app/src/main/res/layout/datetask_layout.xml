@@ -29,29 +29,32 @@
         app:layout_constraintVertical_bias="0.025" />
 
     <Button
-        android:id="@+id/btnAddDateTask"
+        android:id="@+id/btnEditDateTask"
         android:layout_width="134dp"
         android:layout_height="58dp"
-        android:text="Add Task"
-        app:layout_constraintBottom_toTopOf="@+id/btnEditDateTask"
+        android:layout_marginBottom="128dp"
+        android:text="Edit Task"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnEditDateTask"
+        android:id="@+id/btnAddDateTask"
         android:layout_width="134dp"
-        android:layout_height="55dp"
-        android:text="Edit Task"
-        app:layout_constraintBottom_toTopOf="@+id/btnDeleteDateTask"
+        android:layout_height="58dp"
+        android:layout_marginBottom="184dp"
+        android:text="Add Task"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnDeleteDateTask"
         android:layout_width="134dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="40dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="72dp"
         android:text="Delete Task
 "
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,4 +75,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDateTime"
         app:layout_constraintVertical_bias="0.043" />
+
+    <Button
+        android:id="@+id/dateGoBack"
+        android:layout_width="134dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:text="Go Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
